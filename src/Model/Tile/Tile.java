@@ -1,12 +1,14 @@
+package Model.Tile;
+
 import javax.swing.JButton;
 import javax.swing.ImageIcon;
 
 public class Tile extends JButton{
-    int r,c;   //position
-    int count; //how many surrounding bomb does it have?
-    boolean isMine; //false by default
+    public int r,c;   //position
+    public int count; //how many surrounding bomb does it have?
+    public boolean isMine; //false by default
     boolean flagged;
-    int nrOfFlaggedTiles = 0;
+    public int nrOfFlaggedTiles = 0;
 
     public Tile(int r , int c) {
         this.r = r;
@@ -17,17 +19,19 @@ public class Tile extends JButton{
     /**
      * TOGGLE FUNCTION FOR EXPLOSIVE TILE
      */
+
     public void isFlagged(){
         flagged = !flagged; //if flagged true
         if(flagged){
-            this.setIcon(new ImageIcon("flag.png"));
+           this.setIcon(new ImageIcon("src/UsedAssets/flag.png"));
+
 
         } else {
             this.setIcon(null);
+
         }
 
     }
-
 
 
 
