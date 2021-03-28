@@ -26,7 +26,6 @@ public class Board extends JPanel implements MouseListener {
                 board[row][col] = t;    //for data structure
             }
         }
-
         generateMines();
         countMines();
         frame.setVisible(true);
@@ -41,8 +40,8 @@ public class Board extends JPanel implements MouseListener {
             int row = (int) (Math.random() * board.length);
             int col = (int) (Math.random() * board[0].length);
 
-            /**
-             * BECASUSE THE Math.random() WILL GIVE A VALUE BETWEEN 0.0 AND 1.0
+            /*
+             * BECAUSE THE Math.random() WILL GIVE A VALUE BETWEEN 0.0 AND 1.0
              * THERE ARE CHANCES THAT 2 OR MORE MINES WILL END UP IN THE SAME TILE
              * SO WE NEED TO CHECK IF THERE ARE MINES ALREADY PRESENT IN THE TILES
              * IF YES, THEN IT RE-DISTRIBUTES THE MINES
@@ -102,7 +101,7 @@ public class Board extends JPanel implements MouseListener {
         }
     }
 
-    /**
+    /*
      * IF THE NUMBER OF UNOPENED TILES IS EQUAL TO THE NUMBER OF MINES THEN THE PLAYER HAS WON
      */
     public void checkWon(){
@@ -126,7 +125,6 @@ public class Board extends JPanel implements MouseListener {
         JOptionPane.showMessageDialog(null,"Oh no! You lost :( .....Better luck next time!");
         repaint();
     }
-
 
     public void revealMines(){
         for (Tile[] tiles : board) {
@@ -157,7 +155,6 @@ public class Board extends JPanel implements MouseListener {
             t.isFlagged();
         }
     }
-
 
     @Override
     public void mousePressed(MouseEvent e) {
