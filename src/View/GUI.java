@@ -1,8 +1,6 @@
 package View;
-
 import javax.swing.*;
 import java.awt.*;
-
 
 public class GUI extends JPanel {
     public JFrame frame = new JFrame("Minesweeper BETA");
